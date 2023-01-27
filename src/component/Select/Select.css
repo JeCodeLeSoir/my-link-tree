@@ -1,0 +1,81 @@
+.Select {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    border-radius: 10px;
+
+    padding: 5px;
+    width: 200px;
+    height: 39px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Select .visible {
+    display: block !important;
+    visibility: visible !important;
+}
+
+
+.Select .Select-options {
+    display: none;
+    visibility: hidden;
+
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: fixed;
+
+    width: 200px;
+    height: 130px;
+
+    overflow-y: auto;
+
+    border: 2px solid rgb(113, 113, 113);
+
+    z-index: 9999;
+}
+
+.Select .Select-options img {
+    flex: 0 0 33.33%;
+    height: 30px;
+}
+
+.Select .Select-button {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+
+    margin-left: 25px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Select .Select-button:hover {
+    background-color: rgb(47, 132, 243);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.Select>.Select-button>img {
+    height: 30px;
+    object-fit: cover;
+}
+
+.Select .Select-value>img {
+    height: 30px;
+    object-fit: cover;
+}

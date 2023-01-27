@@ -1,0 +1,143 @@
+:root {
+    --input-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+}
+
+html, body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.YourLink {
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /*background-color: #000;*/
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    margin: 10px;
+
+    width: 35vw;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* shadow */
+    /*box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);*/
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+}
+
+.Create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Create>a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 25px;
+}
+
+.Create form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.Create form textarea {
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    resize: none;
+    margin: 10px;
+}
+
+.EditeName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EditeName input {
+    font-size: 100%;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+
+    margin: 10px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .YourLink {
+        width: 90vw;
+        height: 90vh;
+    }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .YourLink {
+        width: 80vw;
+        height: 90vh;
+    }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+    .YourLink {
+        width: 50vw;
+        height: 90vh;
+    }
+}
+
+/* desktop */
+@media (min-width: 1440px) {
+    .YourLink {
+        width: 35vw;
+        height: 95vh;
+    }
+}

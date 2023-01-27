@@ -1,0 +1,32 @@
+.Button {
+    background-color: #ffffff;
+
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    border-radius: 8px;
+
+    width: 200px;
+    height: 45px;
+}
+
+.Button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.Button a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

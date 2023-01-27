@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { useRoutes, useParams } from 'react-router-dom';
+import Home from './pages/Home';
+import YourLink from './pages/YourLink';
+
+const YourLinkParams = () => {
+  let { user } = useParams();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <YourLink user={user} />);
 }
+
+const App = () => {
+  const routes = useRoutes([
+    { path: '/', element: <Home /> },
+    {
+      path: '/:user', element: <YourLinkParams />
+    },
+    {
+      path: '>/#/:user', element: <YourLinkParams />
+    },
+  ]);
+  return routes;
+};
 
 export default App;
