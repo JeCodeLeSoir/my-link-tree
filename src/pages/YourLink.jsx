@@ -15,6 +15,8 @@ export default class YourLink extends React.Component {
     constructor(props) {
         super(props);
 
+        console.log("=== YourLink ===");
+
         const load = (data) => {
             data = decodeURIComponent(atob(data))
             console.log(data);
