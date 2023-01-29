@@ -12,12 +12,17 @@ const YourLinkParams = () => {
 
 const App = () => {
   const routes = useRoutes([
-    { path: '/', element: <Home /> },
+    {
+      path: '/', element: <Home />
+    },
     {
       path: '/:user', element: <YourLinkParams />
     },
     {
       path: '>/#/:user', element: <YourLinkParams />
+    },
+    {
+      path: '*', element: <YourLinkParams />
     },
   ]);
   return routes;

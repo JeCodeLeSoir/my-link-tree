@@ -2,7 +2,7 @@
   "name": "my-link-book",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jecodelesoir.github.io/my-link-tree",
+  "homepage": "/my-link-tree/#",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

@@ -3,19 +3,17 @@ import '../css/YourLink/YourLink.css';
 
 import Picture from '../component/Picture/Picture';
 import Button from '../component/Button/Button';
-
 import ButtonEditor from '../component/ButtonEditor/ButtonEditor';
 
 /*  lz-string */
 /*import * as LZString from 'lz-string';*/
-
-
 export default class YourLink extends React.Component {
 
     constructor(props) {
         super(props);
 
         console.log("=== YourLink ===");
+        console.log(this.props.user);
 
         const load = (data) => {
             data = decodeURIComponent(atob(data))
@@ -40,7 +38,7 @@ export default class YourLink extends React.Component {
             */
         }
 
-        if (this.props.user === 'create') {
+        if (this.props.user === undefined || this.props.user === null) {
             this.state = {
                 EditeMode: true,
                 name: "Your Name",
