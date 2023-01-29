@@ -15,7 +15,20 @@ export default class YourLink extends React.Component {
         console.log("=== YourLink ===");
         console.log(this.props.user);
 
+
+        const Base = () => {
+            this.state = {
+                EditeMode: true,
+                name: "Your Name",
+                picture: "https://www.w3schools.com/howto/img_avatar.png",
+                description: "Your Description",
+                buttons: [],
+                background: "https://www.w3schools.com/howto/img_avatar.png",
+            }
+        }
+
         const load = (data) => {
+
             data = decodeURIComponent(atob(data))
             console.log(data);
             //data = LZString.decompress(data);
@@ -38,27 +51,30 @@ export default class YourLink extends React.Component {
             */
         }
 
-        if (this.props.user === undefined || this.props.user === null) {
-            this.state = {
-                EditeMode: true,
-                name: "Your Name",
-                picture: "https://www.w3schools.com/howto/img_avatar.png",
-                description: "Your Description",
-                buttons: [],
-                background: "https://www.w3schools.com/howto/img_avatar.png",
-            }
-        } else {
-            if (this.props.user === ">") {
-                const hash = window.location.hash
-                if (hash[0] === "#" &&
-                    hash[1] === "/") {
-                    const data = hash.slice(2);
-                    load(data);
+        try {
+            if (this.props.user === undefined || this.props.user === null) {
+                Base();
+            } else {
+                if (this.props.user === ">") {
+                    const hash = window.location.hash
+                    if (hash[0] === "#" &&
+                        hash[1] === "/") {
+                        const data = hash.slice(2);
+
+                        if (data.length === 0) {
+                            Base();
+                        }
+                        else {
+                            load(data);
+                        }
+                    }
+                }
+                else {
+                    load(this.props.user);
                 }
             }
-            else {
-                load(this.props.user);
-            }
+        } catch (error) {
+            Base();
         }
     }
 
